@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JaviChapa — ¡Sabor Tradicional!</title>
+  <meta name="description" content="Menú digital JaviChapa. Cachapas, cochino frito, sopas, bebidas y combos." />
+  <link rel="icon" href="assets/img/logo.png" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo+Black&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ================= VIDEO DE FONDO ================= -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="assets/video/fondo.mp4" type="video/mp4" />
+  </video>
+  <div class="bg-overlay"></div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="header-inner">
+      <img src="assets/img/logo.png" alt="JaviChapa" class="logo" onerror="this.style.display='none'" />
+      <h1 class="menu-word">MENU</h1>
+      <p class="slogan">¡Sabor Tradicional!</p>
+    </div>
+  </header>
+
+  <!-- ================= TOP BAR (Delivery + Toggle) ================= -->
+  <div class="top-bar" id="top-bar">
+    <a href="tel:04122129339" class="top-delivery" aria-label="Llamar a delivery">
+      <span class="delivery-icon">📞</span>
+      <span class="delivery-number">0412 212 93 39</span>
+    </a>
+    <button id="view-toggle" class="view-toggle-btn" aria-label="Cambiar vista">
+      <span class="view-label">Vista Simple</span>
+    </button>
+  </div>
+
+  <!-- ================= FILTROS ================= -->
+  <nav class="filters" id="filters">
+    <button class="filter-btn active" data-filter="all">Todos</button>
+    <button class="filter-btn" data-filter="cachapas">Cachapas</button>
+    <button class="filter-btn" data-filter="sopas">Sopas</button>
+    <button class="filter-btn" data-filter="especialidad">Especialidad</button>
+    <button class="filter-btn" data-filter="bebidas">Bebidas</button>
+    <button class="filter-btn" data-filter="combos">Combos</button>
+  </nav>
+
+  <!-- ================= MENÚ ================= -->
+  <main class="menu" id="menu">
+
+    <!-- ============================================================
+         VISTA NORMAL
+    ============================================================ -->
+    <div id="view-normal">
+
+      <!-- CACHAPAS -->
+      <section class="category" data-category="cachapas">
+        <div class="cat-banner"><h2>CACHAPAS</h2></div>
+        <div class="items">
+          <article class="item" data-aos="fade-up">
+            <div class="item-img">
+              <img src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=600&q=80" alt="Cachapa con queso" loading="lazy" />
+              <span class="price-circle">$7</span>
+            </div>
+            <div class="item-info">
+              <h3>Cachapa con Queso</h3>
+              <p>Masa de maíz tierno con queso de mano derretido.</p>
+            </div>
+          </article>
+          <article class="item" data-aos="fade-up">
+            <div class="item-img">
+              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80" alt="4 Cachapas familiares" loading="lazy" />
+              <span class="price-circle">$23</span>
+            </div>
+            <div class="item-info">
+              <h3>4 Cachapas con Queso</h3>
+              <p>Presentación familiar. Perfectas para compartir.</p>
+            </div>
+          </article>
+          <article class="item" data-aos="fade-up">
+            <div class="item-img">
+              <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=600&q=80" alt="Cachapa con chuleta" loading="lazy" />
+              <span class="price-circle">$12</span>
+            </div>
+            <div class="item-info">
+              <h3>Cachapa con Chuleta de Cochino</h3>
+              <p>Nuestra cachapa clásica con chuleta dorada.</p>
+            </div>
+          </article>
+          <article class="item" data-aos="fade-up">
+            <div class="item-img">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Cachapa con cochino" loading="lazy" />
+              <span class="price-circle">$12</span>
+            </div>
+            <div class="item-info">
+              <h3>Cachapa con 250gr de Cochino</h3>
+              <p>Con generosa porción de cochino frito crujiente.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SOPAS -->
+      <section class="category" data-category="sopas">
+        <div class="cat-banner"><h2>SOPAS</h2></div>
+        <div class="items">
+          <article class="item" data-aos="fade-up">
+            <div class="item-img">
+              <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="Sopa 300 ml" loading="lazy" />
+              <span class="price-circle">$8</span>
+            </div>
+            <div class="item-info"><h3>Sopa 300 ml</h3><p>Caldo casero con verduras frescas.</p></div>
+          </article>
+          <article class="item" data-aos="fade-up">
+            <div class="item-img">
+              <img src="https://images.unsplash.com/photo-1604152135912-04a022e23696?w=600&q=80" alt="Sopa 500 ml" loading="lazy" />
+              <span class="price-circle">$9</span>
+            </div>
+            <div class="item-info"><h3>Sopa 500 ml</h3><p>Porción generosa de nuestro caldo tradicional.</p></div>
+          </article>
+          <article class="item" data-aos="fade-up">
+            <div class="item-img">
+              <img src="https://images.unsplash.com/photo-1583953273241-4bd4d0c7e5b5?w=600&q=80" alt="Mondongo 300 ml" loading="lazy" />
+              <span class="price-circle">$8</span>
+            </div>
+            <div class="item-info"><h3>Mondongo 300 ml</h3><p>Receta de la casa, sazón tradicional.</p></div>
+          </article>
+          <article class="item" data-aos="fade-up">
+            <div class="item-img">
+              <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?w=600&q=80" alt="Mondongo 500 ml" loading="lazy" />
+              <span class="price-circle">$9</span>
+            </div>
+            <div class="item-info"><h3>Mondongo 500 ml</h3><p>La porción grande, para los que quieren repetir.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ESPECIALIDAD -->
+      <section class="category" data-category="especialidad">
+        <div class="cat-banner"><h2>ESPECIALIDAD</h2></div>
+        <div class="items">
+          <article class="item" data-aos="fade-up">
+            <div class="item-img">
+              <img src="https://images.unsplash.com/photo-1625943553852-781c6dd46faa?w=600&q=80" alt="Ceviche de cochino" loading="lazy" />
+              <span class="price-circle">$14</span>
+            </div>
+            <div class="item-info"><h3>Ceviche de Cochino</h3><p>Cochino marinado con limón, cebolla y ají dulce.</p></div>
+          </article>
+          <article class="item" data-aos="fade-up">
+            <div class="item-img">
+              <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=600&q=80" alt="Espetada" loading="lazy" />
+              <span class="price-circle">$12</span>
+            </div>
+            <div class="item-info"><h3>Espetada (carne asada)</h3><p>Carne asada al carbón, jugosa y sazonada.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- BEBIDAS -->
+      <section class="category" data-category="bebidas">
+        <div class="cat-banner"><h2>BEBIDAS</h2></div>
+        <div class="items">
+          <article class="item" data-aos="fade-up">
+            <div class="item-img">
+              <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=600&q=80" alt="Malta" loading="lazy" />
+              <span class="price-circle">$1</span>
+            </div>
+            <div class="item-info"><h3>Maltas 350 ml</h3><p>Bien fría, como debe ser.</p></div>
+          </article>
+          <article class="item" data-aos="fade-up">
+            <div class="item-img">
+              <img src="https://images.unsplash.com/photo-1546171753-97d7676e4602?w=600&q=80" alt="Papelón con limón" loading="lazy" />
+              <span class="price-circle">$1.5</span>
+            </div>
+            <div class="item-info"><h3>Papelón con Limón</h3><p>Refrescante y natural.</p></div>
+          </article>
+          <article class="item" data-aos="fade-up">
+            <div class="item-img">
+              <img src="https://images.unsplash.com/photo-1581006852262-e4307cf6283a?w=600&q=80" alt="Refresco 1 litro" loading="lazy" />
+              <span class="price-circle empty"></span>
+            </div>
+            <div class="item-info"><h3>Refresco 1 litro</h3><p>Pregunta por disponibilidad.</p></div>
+          </article>
+          <article class="item" data-aos="fade-up">
+            <div class="item-img">
+              <img src="https://images.unsplash.com/photo-1613478223719-2ab802602423?w=600&q=80" alt="Jugos naturales" loading="lazy" />
+              <span class="price-circle">$2</span>
+            </div>
+            <div class="item-info"><h3>Jugos Naturales</h3><p>Parchita, Fresa, Mora o Durazno.</p></div>
+          </article>
+          <article class="item" data-aos="fade-up">
+            <div class="item-img">
+              <img src="https://images.unsplash.com/photo-1546171753-97d7676e4602?w=600&q=80" alt="Coctel de frutas" loading="lazy" />
+              <span class="price-circle">$2</span>
+            </div>
+            <div class="item-info"><h3>Coctel de Frutas</h3><p>Fresa, Mora o Cambur.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- COMBOS -->
+      <section class="category" data-category="combos">
+        <div class="cat-banner highlight"><h2>COMBOS ESPECIALES</h2></div>
+        <div class="items combos">
+          <article class="item combo-card" data-aos="fade-up">
+            <div class="item-img">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80" alt="Combo 1" loading="lazy" />
+              <span class="price-circle big">$23</span>
+            </div>
+            <div class="item-info">
+              <h3>Combo #1</h3>
+              <p>1 kg de cochino frito, papas fritas, ensalada rallada, arepitas y chorizo.</p>
+            </div>
+          </article>
+          <article class="item combo-card" data-aos="fade-up">
+            <div class="item-img">
+              <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=800&q=80" alt="Combo 2" loading="lazy" />
+              <span class="price-circle big">$13</span>
+            </div>
+            <div class="item-info">
+              <h3>Combo #2</h3>
+              <p>1/2 kg de cochino frito, papas fritas y ensalada rallada.</p>
+            </div>
+          </article>
+          <article class="item combo-card" data-aos="fade-up">
+            <div class="item-img">
+              <img src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=800&q=80" alt="Combo 3" loading="lazy" />
+              <span class="price-circle big">$17</span>
+            </div>
+            <div class="item-info">
+              <h3>Combo #3</h3>
+              <p>1/2 kg de cochino frito, papas fritas, ensalada rallada y 1 cachapa con queso.</p>
+            </div>
+          </article>
+          <article class="item combo-card" data-aos="fade-up">
+            <div class="item-img">
+              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&q=80" alt="Combo 4" loading="lazy" />
+              <span class="price-circle big">$14</span>
+            </div>
+            <div class="item-info">
+              <h3>Combo #4</h3>
+              <p>1/2 kg de cochino frito y 1 cachapa con queso.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div><!-- /view-normal -->
+
+
+    <!-- ============================================================
+         VISTA SIMPLE (estilo flyer con fotos grandes)
+    ============================================================ -->
+    <div id="view-simple" hidden>
+
+      <!-- Collage decorativo de fondo -->
+      <div class="collage" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=70" class="collage-img ci-1" loading="lazy" alt="" />
+        <img src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=400&q=70" class="collage-img ci-2" loading="lazy" alt="" />
+        <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&q=70" class="collage-img ci-3" loading="lazy" alt="" />
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=400&q=70" class="collage-img ci-4" loading="lazy" alt="" />
+        <img src="https://images.unsplash.com/photo-1613478223719-2ab802602423?w=400&q=70" class="collage-img ci-5" loading="lazy" alt="" />
+        <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=400&q=70" class="collage-img ci-6" loading="lazy" alt="" />
+      </div>
+
+      <div class="simple-inner">
+
+        <!-- CACHAPAS — foto izquierda -->
+        <section class="simple-cat" data-aos="fade-up">
+          <div class="simple-photo">
+            <img src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=800&q=80" alt="Cachapas" loading="lazy" />
+          </div>
+          <div class="simple-content">
+            <h2 class="simple-cat-title">CACHAPAS</h2>
+            <ul class="simple-list">
+              <li><span class="sn">Cachapa con Queso</span><span class="sp">$7</span></li>
+              <li><span class="sn">4 Cachapas con Queso (Familiar)</span><span class="sp">$23</span></li>
+              <li><span class="sn">Cachapa con Chuleta de Cochino</span><span class="sp">$12</span></li>
+              <li><span class="sn">Cachapa con 250gr de Cochino</span><span class="sp">$12</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- SOPAS — foto derecha -->
+        <section class="simple-cat" data-aos="fade-up">
+          <div class="simple-photo">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80" alt="Sopas" loading="lazy" />
+          </div>
+          <div class="simple-content">
+            <h2 class="simple-cat-title">SOPAS</h2>
+            <ul class="simple-list">
+              <li><span class="sn">Sopa 300 ml</span><span class="sp">$8</span></li>
+              <li><span class="sn">Sopa 500 ml</span><span class="sp">$9</span></li>
+              <li><span class="sn">Mondongo 300 ml</span><span class="sp">$8</span></li>
+              <li><span class="sn">Mondongo 500 ml</span><span class="sp">$9</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ESPECIALIDAD — foto izquierda -->
+        <section class="simple-cat" data-aos="fade-up">
+          <div class="simple-photo">
+            <img src="https://images.unsplash.com/photo-1625943553852-781c6dd46faa?w=800&q=80" alt="Especialidad" loading="lazy" />
+          </div>
+          <div class="simple-content">
+            <h2 class="simple-cat-title">ESPECIALIDAD</h2>
+            <ul class="simple-list">
+              <li><span class="sn">Ceviche de Cochino</span><span class="sp">$14</span></li>
+              <li><span class="sn">Espetada (carne asada)</span><span class="sp">$12</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- BEBIDAS — foto derecha -->
+        <section class="simple-cat" data-aos="fade-up">
+          <div class="simple-photo">
+            <img src="https://images.unsplash.com/photo-1613478223719-2ab802602423?w=800&q=80" alt="Bebidas" loading="lazy" />
+          </div>
+          <div class="simple-content">
+            <h2 class="simple-cat-title">BEBIDAS</h2>
+            <ul class="simple-list">
+              <li><span class="sn">Maltas 350 ml</span><span class="sp">$1</span></li>
+              <li><span class="sn">Papelón con Limón</span><span class="sp">$1.5</span></li>
+              <li><span class="sn">Refresco 1 litro</span><span class="sp"></span></li>
+              <li><span class="sn">Jugos Naturales (Parchita, Fresa, Mora, Durazno)</span><span class="sp">$2</span></li>
+              <li><span class="sn">Coctel de Frutas (Fresa, Mora, Cambur)</span><span class="sp">$2</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- COMBOS — foto izquierda, con descripciones -->
+        <section class="simple-cat simple-combos" data-aos="fade-up">
+          <div class="simple-photo">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80" alt="Combos" loading="lazy" />
+          </div>
+          <div class="simple-content">
+            <h2 class="simple-cat-title">COMBOS ESPECIALES</h2>
+            <ul class="simple-list">
+              <li class="has-desc">
+                <div class="li-text">
+                  <span class="sn">Combo #1</span>
+                  <em class="sn-desc">1 kg de cochino frito, papas fritas, ensalada rallada, arepitas y chorizo</em>
+                </div>
+                <span class="sp">$23</span>
+              </li>
+              <li class="has-desc">
+                <div class="li-text">
+                  <span class="sn">Combo #2</span>
+                  <em class="sn-desc">1/2 kg de cochino frito, papas fritas y ensalada rallada</em>
+                </div>
+                <span class="sp">$13</span>
+              </li>
+              <li class="has-desc">
+                <div class="li-text">
+                  <span class="sn">Combo #3</span>
+                  <em class="sn-desc">1/2 kg de cochino frito, papas fritas, ensalada rallada y 1 cachapa con queso</em>
+                </div>
+                <span class="sp">$17</span>
+              </li>
+              <li class="has-desc">
+                <div class="li-text">
+                  <span class="sn">Combo #4</span>
+                  <em class="sn-desc">1/2 kg de cochino frito y 1 cachapa con queso</em>
+                </div>
+                <span class="sp">$14</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+    </div><!-- /view-simple -->
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="delivery-box">
+      <span class="delivery-tag">DELIVERY</span>
+      <a href="tel:04122129339" class="delivery-phone">0412 212 93 39</a>
+      <p class="delivery-sub">¡Pide ya y disfruta en casa!</p>
+    </div>
+    <p class="copy">© JaviChapa — ¡Sabor Tradicional!</p>
+  </footer>
+
+  <a href="tel:04122129339" class="call-float" aria-label="Llamar a delivery">📞</a>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
