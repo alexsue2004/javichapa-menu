@@ -633,3 +633,18 @@ body.topbar-hidden .filters {
   .simple-photo { min-height: 200px; }
   .simple-content { padding: 1.5rem 1.8rem; }
 }
+
+/* Kids: 1 solo item, que ocupe ancho completo */
+.category[data-category="kids"] .items {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px) {
+  .category[data-category="kids"] .items {
+    grid-template-columns: 1fr 1fr;
+  }
+  .category[data-category="kids"] .items .item:only-child {
+    grid-column: 1 / -1;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
