@@ -88,11 +88,9 @@ function handleScroll() {
   }
 
   if (currentScrollY > lastScrollY && currentScrollY > 80) {
-    // Scroll hacia abajo → ocultar top bar y pegar filtros arriba
     topBar.classList.add('hidden');
     document.body.classList.add('topbar-hidden');
   } else {
-    // Scroll hacia arriba → mostrar top bar y bajar filtros
     topBar.classList.remove('hidden');
     document.body.classList.remove('topbar-hidden');
   }
